@@ -50,6 +50,7 @@
 		D819AB8E1DD5BC10005188EA /* BFEHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D819AB641DD5BC10005188EA /* BFEHTTPServer.m */; };
 		D819AB8F1DD5BC10005188EA /* BFEHTTPServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D819AB661DD5BC10005188EA /* BFEHTTPServerManager.m */; };
 		D819AB901DD5BC10005188EA /* BFEHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D819AB681DD5BC10005188EA /* BFEHTTPSessionManager.m */; };
+		D8767C011DD5D49C009DFBAF /* MERHTTPServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8767C001DD5D49C009DFBAF /* MERHTTPServerManager.m */; };
 		DC92F9DE95096AE72F5BE6E0 /* libPods-DKPrecordTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F69E6F4AE8EF159BAA002E /* libPods-DKPrecordTests.a */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +161,8 @@
 		D819AB661DD5BC10005188EA /* BFEHTTPServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFEHTTPServerManager.m; sourceTree = "<group>"; };
 		D819AB671DD5BC10005188EA /* BFEHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFEHTTPSessionManager.h; sourceTree = "<group>"; };
 		D819AB681DD5BC10005188EA /* BFEHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFEHTTPSessionManager.m; sourceTree = "<group>"; };
+		D8767BFF1DD5D49C009DFBAF /* MERHTTPServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERHTTPServerManager.h; sourceTree = "<group>"; };
+		D8767C001DD5D49C009DFBAF /* MERHTTPServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERHTTPServerManager.m; sourceTree = "<group>"; };
 		F3FAA4E7B5C19257BA201176 /* Pods-DKPrecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPrecordTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKPrecordTests/Pods-DKPrecordTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA236F952C1B7503FBC5C1EB /* Pods-DKPrecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPrecord.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKPrecord/Pods-DKPrecord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,6 +243,7 @@
 		D819AA8F1DD5B223005188EA /* DKPrecord */ = {
 			isa = PBXGroup;
 			children = (
+				D8767BFE1DD5D47F009DFBAF /* ServerManager */,
 				D819AACD1DD5B3BD005188EA /* TheLatest */,
 				D819AA931DD5B223005188EA /* AppDelegate.h */,
 				D819AA941DD5B223005188EA /* AppDelegate.m */,
@@ -431,6 +435,15 @@
 				D819AB681DD5BC10005188EA /* BFEHTTPSessionManager.m */,
 			);
 			path = "服务器接口";
+			sourceTree = "<group>";
+		};
+		D8767BFE1DD5D47F009DFBAF /* ServerManager */ = {
+			isa = PBXGroup;
+			children = (
+				D8767BFF1DD5D49C009DFBAF /* MERHTTPServerManager.h */,
+				D8767C001DD5D49C009DFBAF /* MERHTTPServerManager.m */,
+			);
+			path = ServerManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -734,6 +747,7 @@
 				D819AB7C1DD5BC10005188EA /* BFEProgressWrapper.m in Sources */,
 				D819AB7D1DD5BC10005188EA /* BFEUICreator.m in Sources */,
 				D819AB7A1DD5BC10005188EA /* UINavigationItem+BackItem.m in Sources */,
+				D8767C011DD5D49C009DFBAF /* MERHTTPServerManager.m in Sources */,
 				D819AB821DD5BC10005188EA /* NSData+Base64.m in Sources */,
 				D819AB7B1DD5BC10005188EA /* UIView+CornerRadius.m in Sources */,
 			);

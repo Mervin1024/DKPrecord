@@ -12,7 +12,7 @@
 @implementation BFEHTTPSessionManager
 
 //- (instancetype)initWithSessionConfiguration:(NSURLSessionConfiguration *)configuration {
-//    // 后台下载任务结束后的回馈（已取消）
+    // 后台下载任务结束后的回馈（已取消）
 //    [self setDidFinishEventsForBackgroundURLSessionBlock:^(NSURLSession * _Nonnull session) {
 //        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //        if (appDelegate.backgroundURLSessionCompletionHandler) {

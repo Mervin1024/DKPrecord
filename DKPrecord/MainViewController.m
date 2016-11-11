@@ -7,15 +7,27 @@
 //
 
 #import "MainViewController.h"
+#import "MERHTTPServerManager.h"
+#import "AutoRemoveMessageView.h"
 
 @interface MainViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation MainViewController{
+    MERHTTPServerManager *_server;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _server = [[MERHTTPServerManager alloc] init];
+    [_server getTestTextSuccess:^(BFEHTTPServer *bfeHttpServer) {
+        NSDictionary *dic = [MERHTTPServerManager parseObjectFromRequest:bfeHttpServer];
+        NSLog(@"%@",dic);
+    } faild:^(BFEHTTPServer *bfeHttpServer) {
+        NSString *str = bfeHttpServer.error.localizedDescription;
+        [AutoRemoveMessageView show:str];
+    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
