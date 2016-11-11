@@ -1,0 +1,30 @@
+//
+//  DKPrecord.pch
+//  DKPrecord
+//
+//  Created by mervin on 2016/11/11.
+//  Copyright © 2016年 mervin. All rights reserved.
+//
+
+#ifndef DKPrecord_pch
+#define DKPrecord_pch
+
+#ifdef DEBUG
+#define DebugMode                       YES
+#define NSLog(format, ...)              printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#define debugMethod()                   NSLog(@"%s", __func__)
+#else
+#define DebugMode                       NO
+#define NSLog(format, ...)
+#define debugMethod()
+#endif
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#import "Constants.h"
+
+#endif /* DKPrecord_pch */
