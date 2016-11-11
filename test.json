@@ -1,0 +1,156 @@
+{
+    "courseDetailArray": [{
+                          "data": {
+                          "group_room_info": {
+                          "group_name": "BOXFiSH Online Teaching Group",
+                          "group_id": "@TGS#2D7NVKBEQ",
+                          "chat_room_id": 3129686221
+                          },
+                          "student_detail": {
+                          "student_info": {
+                          "real_name": "student@hjj.com",
+                          "level": 1,
+                          "level_name": "呀呀1level",
+                          "figure_url": "http://q.qlogo.cn/qqapp/101019284/71BF161974A778B3631B7E2CCD85F8A7/40"
+                          },
+                          "lesson_info": {
+                          "id": "L3NoYXJlL3N2bi9Cb3hmaXNo6K--56iL5qih5p2_LzAwMC7miYDmnInmqKHmnb_lkIjovpEueGxzeA",
+                          "name": "怎样表达“也”",
+                          "lastModified": 1465808647074,
+                          "cover": "37ae7a64e385e8995abba0ff8a8a86ec"
+                          },
+                          "achievement_info": {
+                          "read_word_count": "0words",
+                          "listening_time": "0sec",
+                          "record_time": "0sec",
+                          "word_count": "0words"
+                          },
+                          "course_type_info": {
+                          "course_type_ratio": [{
+                                                "course_type": "Conversation",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Passage",
+                                                "ratio": 0.05
+                                                }, {
+                                                "course_type": "Function",
+                                                "ratio": 0.15
+                                                }, {
+                                                "course_type": "Phonics",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Examination",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Words",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Grammar",
+                                                "ratio": 0.2
+                                                }, {
+                                                "course_type": "Textbook",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Music",
+                                                "ratio": 0.1
+                                                }],
+                          "course_count": 123456
+                          }
+                          },
+                          "is_start": false,
+                          "start_time": "2016-06-25 07:00:00",
+                          "end_time": "2016-07-28 10:50:00",
+                          },
+                          "workOrderId": 1,
+                          "returnCode": 200,
+                          "returnMsg": "success"
+                          }, {
+                          "data": {
+                          "group_room_info": {
+                          "group_name": "BOXFiSH Online Teaching Group",
+                          "group_id": "@TGS#2D7NVKBEQ",
+                          "chat_room_id": 312968621
+                          },
+                          "student_detail": {
+                          "student_info": {
+                          "real_name": "学生测试号112",
+                          "level": 1,
+                          "level_name": "呀呀1level",
+                          "figure_url": "http://q.qlogo.cn/qqapp/101019284/71BF161974A778B3631B7E2CCD85F8A7/40"
+                          },
+                          "lesson_info": {
+                          "id": "L3NoYXJlL3N2bi9Ub3BpY1_mloflqLHkuI7kvZPogrIvMDE4LumAgOW9ueaXtu-8jOenkeavlOacgOaDs-aEn-iwoueahOaYr-iwge-8ny54bHN4",
+                          "name": "独自在家能有多逍遥",
+                          "lastModified": 1465808647074,
+                          "cover": "37ae7a64e385e8995abba0ff8a8a86ec"
+                          },
+                          "achievement_info": {
+                          "read_word_count": "0words",
+                          "listening_time": "0sec",
+                          "record_time": "0sec",
+                          "word_count": "0words"
+                          },
+                          "course_type_info": {
+                          "course_type_ratio": [{
+                                                "course_type": "Conversation",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Passage",
+                                                "ratio": 0.05
+                                                }, {
+                                                "course_type": "Function",
+                                                "ratio": 0.15
+                                                }, {
+                                                "course_type": "Phonics",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Examination",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Words",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Grammar",
+                                                "ratio": 0.2
+                                                }, {
+                                                "course_type": "Textbook",
+                                                "ratio": 0.1
+                                                }, {
+                                                "course_type": "Music",
+                                                "ratio": 0.1
+                                                }],
+                          "course_count": 123456
+                          }
+                          },
+                          "is_start": false,
+                          "start_time": "2016-06-25 07:00:00",
+                          "end_time": "2016-06-25 17:40:00",
+                          },
+                          "workOrderId": 2,
+                          "returnCode": 200,
+                          "returnMsg": "success"
+                          }],
+    "courseTableArray": [{
+                         "courseId": "L3NoYXJlL3N2bi9Cb3hmaXNo6K--56iL5qih5p2_LzAwMC7miYDmnInmqKHmnb_lkIjovpEueGxzeA",
+                         "timeSlot": 121212,
+                         "courseStartTime": "09:00:00",
+                         "courseEndTime": "09:30:00",
+                         "courseName": "怎样表达“也”",
+                         "courseIconUrl": "http://api.boxfish.cn/student/publication/data/data/37ae7a64e385e8995abba0ff8a8a86ec",
+                         "courseType": "talk",
+                         "workOrderId": 2,
+                         "lastModified": 23234242242,
+                         "courseStatus": 2
+                         }, {
+                         "courseId": "L3NoYXJlL3N2bi9Ub3BpY1_ml6XluLjmtLvliqgvMDA3LueLrOiHquWcqOWutuiDveacieWkmumAjemBpe-8ny54bHN4",
+                         "timeSlot": 121212,
+                         "courseStartTime": "09:00:00",
+                         "courseEndTime": "09:30:00",
+                         "courseName": "独自在家能有多逍遥",
+                         "courseIconUrl": "http://api.boxfish.cn/student/publication/data/data/057ee9b5d40050f79b8cb6602ea3fd83",
+                         "courseType": "talk",
+                         "workOrderId": 1,
+                         "lastModified": 23234242242,
+                         "courseStatus": 2
+                         }]
+}
