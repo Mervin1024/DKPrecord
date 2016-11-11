@@ -880,8 +880,7 @@
 			baseConfigurationReference = BD2A7A235ADA9A70737C8994 /* Pods-DKPrecord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Boxfish Education Technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Boxfish Education Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = X4AW54WQH8;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DKPrecord/Supporting Files/DKPrecord.pch";
 				INFOPLIST_FILE = "DKPrecord/Supporting Files/Info.plist";
@@ -898,8 +897,7 @@
 			baseConfigurationReference = FA236F952C1B7503FBC5C1EB /* Pods-DKPrecord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Boxfish Education Technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Boxfish Education Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = X4AW54WQH8;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DKPrecord/Supporting Files/DKPrecord.pch";
 				INFOPLIST_FILE = "DKPrecord/Supporting Files/Info.plist";
