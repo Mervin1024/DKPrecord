@@ -166,6 +166,10 @@
 	}
 }
 
+- (NSString *)monthAndDayDescription{
+    return nil;
+}
+
 - (double)timeIntervalSince1970InMilliSecond {
     double ret;
     ret = [self timeIntervalSince1970] * 1000;

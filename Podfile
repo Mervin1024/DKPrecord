@@ -17,7 +17,7 @@ pod 'SDWebImage', '~> 3.7.1'
 pod 'Masonry', '~> 1.0.0'
 pod 'Colours', '~> 5.5.0'
 pod 'MBProgressHUD', '~> 0.9'
-
+pod 'FMDBDataTable', '~> 2.1.6'
 
   target 'DKPrecordTests' do
     inherit! :search_paths

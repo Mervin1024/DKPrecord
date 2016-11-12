@@ -25,6 +25,8 @@
 - (NSString *)monthAndMinuteDescription;
 - (NSString *)formattedTime;
 - (NSString *)formattedDateDescription;//格式化日期描述
+- (NSString *)monthAndDayDescription;
+
 - (double)timeIntervalSince1970InMilliSecond;
 + (NSDate *)dateWithTimeIntervalInMilliSecondSince1970:(double)timeIntervalInMilliSecond;
 + (NSString *)formattedTimeFromTimeInterval:(long long)time;

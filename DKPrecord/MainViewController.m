@@ -9,6 +9,9 @@
 #import "MainViewController.h"
 #import "MERHTTPServerManager.h"
 #import "AutoRemoveMessageView.h"
+#import "RecordDBSet.h"
+#import "RecordItemModel.h"
+#import "RecordDailyModel.h"
 
 @interface MainViewController ()
 
@@ -20,22 +23,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _server = [[MERHTTPServerManager alloc] init];
-    [_server getTestTextSuccess:^(BFEHTTPServer *bfeHttpServer) {
-        NSDictionary *dic = [MERHTTPServerManager parseObjectFromRequest:bfeHttpServer];
-        NSLog(@"%@",dic);
-    } faild:^(BFEHTTPServer *bfeHttpServer) {
-        NSString *str = bfeHttpServer.error.localizedDescription;
-        [AutoRemoveMessageView show:str];
+//    _server = [[MERHTTPServerManager alloc] init];
+//    [_server getTestTextSuccess:^(BFEHTTPServer *bfeHttpServer) {
+//        NSDictionary *dic = [MERHTTPServerManager parseObjectFromRequest:bfeHttpServer];
+//        NSLog(@"%@",dic);
+//    } faild:^(BFEHTTPServer *bfeHttpServer) {
+//        NSString *str = bfeHttpServer.error.localizedDescription;
+//        [AutoRemoveMessageView show:str];
+//    }];
+    NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]);
+    [self insertData];  //插入数据
+    
+}
+
+- (void)insertData{
+    
+    NSMutableArray *userArray = [NSMutableArray new];
+    NSArray *nameArr = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九",@"十",@"十一",@"十二"];
+    for (int i = 0; i < [nameArr count]; i++) {
+        RecordItemModel *item = [RecordItemModel new];
+        item.userName = [NSString stringWithFormat:@"%@",nameArr[i]];
+        item.gameClass = [NSString stringWithFormat:@"%@", @(arc4random()%11)];
+        item.initialScore = @(arc4random()%20+40);
+        item.finalScore = @([item.initialScore integerValue]+20);
+        item.ScoreChanges = @[@(-1),@(-3),@(24)];
+        [userArray addObject:item];
+    }
+    RecordDailyModel *dailyModel = [RecordDailyModel new];
+    dailyModel.recordItems = userArray;
+    dailyModel.date = nil;
+    
+    
+    //创建插入对象
+    FMDTInsertCommand *icmd = [[RecordDBSet shared].itemModel createInsertCommand];
+    //添加要插入的对象集合
+    [icmd addWithArray:userArray];
+    //设置添加操作是否使用replace语句
+    [icmd setRelpace:YES];
+    //执行插入操作
+    [icmd saveChangesInBackground:^{
+        NSLog(@"批量数据提交完成");
     }];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
