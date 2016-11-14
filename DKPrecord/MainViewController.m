@@ -34,8 +34,18 @@
 //        [AutoRemoveMessageView show:str];
 //    }];
     NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]);
-    [self insertData];  //插入数据
+    [self selectData];  //查询数据
+
     
+}
+
+- (void)selectData{
+    FMDTSelectCommand *cmd = [[RecordDBSet shared].dailyModel createSelectCommand];
+    [cmd orderByAscending:@"version"];
+    NSArray *arr = [cmd fetchArray];
+    RecordDailyModel *dailyModel = [arr lastObject];
+    [RecordGlobal sharedInstance].tableVersion = [dailyModel.version unsignedIntegerValue];
+    [self insertData];  //插入数据
 }
 
 - (void)insertData{
@@ -49,12 +59,12 @@
         item.initialScore = @(arc4random()%20+40);
         item.finalScore = @([item.initialScore integerValue]+20);
         item.ScoreChanges = @[@(-1),@(-3),@(24)];
-        item.date = [NSDate date].monthAndMinuteDescription;
+//        item.date = [NSDate date].monthAndMinuteDescription;
         [userArray addObject:item];
     }
     RecordDailyModel *dailyModel = [RecordDailyModel new];
     dailyModel.schedule = [NSString stringWithFormat:@"%@",@(arc4random()%4+3)];
-    dailyModel.date = [[NSDate date] monthAndDayDescription];
+    dailyModel.date = [[NSDate date] monthAndSecondDescription];
     dailyModel.version = @([RecordGlobal sharedInstance].tableVersion+1);
     
     //创建插入对象
@@ -62,12 +72,17 @@
     FMDTInsertCommand *icmd = [[RecordDBSet shared].itemModel createInsertCommand];
     //添加要插入的对象集合
     [dcmd add:dailyModel];
-    [icmd addWithArray:@[dailyModel]];
+    [icmd addWithArray:userArray];
     //设置添加操作是否使用replace语句
     [dcmd setRelpace:YES];
+    [icmd setRelpace:YES];
     //执行插入操作
     [dcmd saveChangesInBackground:^{
-        NSLog(@"批量数据提交完成");
+        NSLog(@"dailyModel提交完成");
+    }];
+    [icmd saveChangesInBackground:^{
+        NSLog(@"itemModel提交完成");
+        [RecordGlobal sharedInstance].tableVersion++;
     }];
 }
 

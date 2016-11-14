@@ -20,12 +20,16 @@
 
 @interface NSDate (Category)
 
+// 以下均为“昨天 16：00”类似混杂格式输出
 - (NSString *)timeIntervalDescription;//距离当前的时间间隔描述
 - (NSString *)minuteDescription;/*精确到分钟的日期描述*/
-- (NSString *)monthAndMinuteDescription;
 - (NSString *)formattedTime;
 - (NSString *)formattedDateDescription;//格式化日期描述
+
+// 以下均为正常格式日期输出
+- (NSString *)monthAndMinuteDescription;
 - (NSString *)monthAndDayDescription;
+- (NSString *)monthAndSecondDescription;
 
 - (double)timeIntervalSince1970InMilliSecond;
 + (NSDate *)dateWithTimeIntervalInMilliSecondSince1970:(double)timeIntervalInMilliSecond;

@@ -30,10 +30,10 @@
  分数变化数组（-1、+1、—5、+5）等
  */
 @property (nonatomic, copy) NSArray <NSNumber *>*ScoreChanges;
-/**
- 提交时间
- */
-@property (nonatomic, copy) NSString *date;
+///**
+// 提交时间
+// */
+//@property (nonatomic, copy) NSString *date;
 
 
 @end

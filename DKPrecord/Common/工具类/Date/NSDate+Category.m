@@ -45,6 +45,13 @@
     return [dateFormatter stringFromDate:self];
 }
 
+- (NSString *)monthAndSecondDescription
+{
+    NSDateFormatter *dateFormatter = [NSDateFormatter dateFormatterWithFormat:@"yyyy-MM-dd"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return [dateFormatter stringFromDate:self];
+}
+
 /*精确到分钟的日期描述*/
 - (NSString *)minuteDescription
 {
