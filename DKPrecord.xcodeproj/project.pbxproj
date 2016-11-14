@@ -54,6 +54,7 @@
 		D89D7FCD1DD70AFB007EF221 /* RecordItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D7FCC1DD70AFB007EF221 /* RecordItemModel.m */; };
 		D89D7FD41DD70F5B007EF221 /* RecordDailyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D7FD31DD70F5B007EF221 /* RecordDailyModel.m */; };
 		D89D7FD71DD7163D007EF221 /* RecordDBSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D89D7FD61DD7163D007EF221 /* RecordDBSet.m */; };
+		D8CFBC1A1DD989E10011454C /* RecordGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CFBC191DD989E10011454C /* RecordGlobal.m */; };
 		DC92F9DE95096AE72F5BE6E0 /* libPods-DKPrecordTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F69E6F4AE8EF159BAA002E /* libPods-DKPrecordTests.a */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,8 @@
 		D89D7FD31DD70F5B007EF221 /* RecordDailyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDailyModel.m; sourceTree = "<group>"; };
 		D89D7FD51DD7163D007EF221 /* RecordDBSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDBSet.h; sourceTree = "<group>"; };
 		D89D7FD61DD7163D007EF221 /* RecordDBSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDBSet.m; sourceTree = "<group>"; };
+		D8CFBC181DD989E10011454C /* RecordGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordGlobal.h; sourceTree = "<group>"; };
+		D8CFBC191DD989E10011454C /* RecordGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordGlobal.m; sourceTree = "<group>"; };
 		F3FAA4E7B5C19257BA201176 /* Pods-DKPrecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPrecordTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKPrecordTests/Pods-DKPrecordTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA236F952C1B7503FBC5C1EB /* Pods-DKPrecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPrecord.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKPrecord/Pods-DKPrecord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +320,8 @@
 		D819AB0A1DD5BC0F005188EA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D8CFBC181DD989E10011454C /* RecordGlobal.h */,
+				D8CFBC191DD989E10011454C /* RecordGlobal.m */,
 				D89D7FCA1DD70A85007EF221 /* models */,
 				D819AB0B1DD5BC0F005188EA /* Fonts */,
 				D819AB141DD5BC0F005188EA /* UI */,
@@ -774,6 +779,7 @@
 				D819AA951DD5B223005188EA /* AppDelegate.m in Sources */,
 				D819AB7C1DD5BC10005188EA /* BFEProgressWrapper.m in Sources */,
 				D89D7FD41DD70F5B007EF221 /* RecordDailyModel.m in Sources */,
+				D8CFBC1A1DD989E10011454C /* RecordGlobal.m in Sources */,
 				D89D7FD71DD7163D007EF221 /* RecordDBSet.m in Sources */,
 				D819AB7D1DD5BC10005188EA /* BFEUICreator.m in Sources */,
 				D819AB7A1DD5BC10005188EA /* UINavigationItem+BackItem.m in Sources */,

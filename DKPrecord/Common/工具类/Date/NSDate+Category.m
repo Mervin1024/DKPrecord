@@ -41,22 +41,8 @@
 - (NSString *)monthAndMinuteDescription
 {
     NSDateFormatter *dateFormatter = [NSDateFormatter dateFormatterWithFormat:@"yyyy-MM-dd"];
-    
-//    NSString *theDay = [dateFormatter stringFromDate:self];//日期的年月日
-//    NSString *currentDay = [dateFormatter stringFromDate:[NSDate date]];//当前年月日
-//    if ([theDay isEqualToString:currentDay]) {//当天
-//        [dateFormatter setDateFormat:@"ah:mm"];
-//        return [dateFormatter stringFromDate:self];
-//    } else if ([[dateFormatter dateFromString:currentDay] timeIntervalSinceDate:[dateFormatter dateFromString:theDay]] == 86400) {//昨天
-//        [dateFormatter setDateFormat:@"ah:mm"];
-//        return [NSString stringWithFormat:@"昨天 %@", [dateFormatter stringFromDate:self]];
-//    } else if ([[dateFormatter dateFromString:currentDay] timeIntervalSinceDate:[dateFormatter dateFromString:theDay]] < 86400 * 7) {//间隔一周内
-//        [dateFormatter setDateFormat:@"EEEE ah:mm"];
-//        return [dateFormatter stringFromDate:self];
-//    } else {//以前
-        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-        return [dateFormatter stringFromDate:self];
-//    }
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    return [dateFormatter stringFromDate:self];
 }
 
 /*精确到分钟的日期描述*/
@@ -167,7 +153,11 @@
 }
 
 - (NSString *)monthAndDayDescription{
-    return nil;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *theDay = [dateFormatter stringFromDate:self];//日期的年月日
+    return theDay;
 }
 
 - (double)timeIntervalSince1970InMilliSecond {

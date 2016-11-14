@@ -10,4 +10,8 @@
 
 @implementation RecordDailyModel
 
++ (NSString *)primaryKeyFieldName{
+    return @"version";
+}
+
 @end

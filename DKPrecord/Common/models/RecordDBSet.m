@@ -9,7 +9,8 @@
 #import "RecordDBSet.h"
 #import "RecordItemModel.h"
 #import "RecordDailyModel.h"
-#import "NSDateFormatter+Category.h"
+#import "NSDate+Category.h"
+#import "RecordGlobal.h"
 
 #define RECORD_DB_PATH [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define RECORD_IDENTIFIER @"翡翠梦魇"
@@ -17,16 +18,13 @@
 @implementation RecordDBSet
 
 - (FMDTContext *)dailyModel{
-    NSDate *date = [NSDate date];
-    NSDateFormatter *formatter = [NSDateFormatter dateFormatterWithFormat:@"yyyy-MM-dd"];
-    NSString *dateStr = [formatter stringFromDate:date];
-    return [self cacheWithClass:[RecordDailyModel class] tableName:dateStr dbPath:[NSString stringWithFormat:@"%@/%@.db", RECORD_DB_PATH, RECORD_IDENTIFIER]];
+    NSString *dateStr = [[NSDate date] monthAndDayDescription];
+    NSString *tableName = [dateStr stringByAppendingFormat:@"-%@",@([RecordGlobal sharedInstance].tableVersion)];
+    return [self cacheWithClass:[RecordDailyModel class] tableName:tableName dbPath:[NSString stringWithFormat:@"%@/%@.db", RECORD_DB_PATH, RECORD_IDENTIFIER]];
 }
 
 - (FMDTContext *)itemModel{
-    NSDate *date = [NSDate date];
-    NSDateFormatter *formatter = [NSDateFormatter dateFormatterWithFormat:@"yyyy-MM-dd"];
-    NSString *dateStr = [formatter stringFromDate:date];
+    NSString *dateStr = [[NSDate date] monthAndDayDescription];
     return [self cacheWithClass:[RecordItemModel class] tableName:dateStr dbPath:[NSString stringWithFormat:@"%@/%@.db", RECORD_DB_PATH, RECORD_IDENTIFIER]];
 }
 

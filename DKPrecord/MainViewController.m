@@ -12,6 +12,8 @@
 #import "RecordDBSet.h"
 #import "RecordItemModel.h"
 #import "RecordDailyModel.h"
+#import "NSDate+Category.h"
+#import "RecordGlobal.h"
 
 @interface MainViewController ()
 
@@ -47,21 +49,24 @@
         item.initialScore = @(arc4random()%20+40);
         item.finalScore = @([item.initialScore integerValue]+20);
         item.ScoreChanges = @[@(-1),@(-3),@(24)];
+        item.date = [NSDate date].monthAndMinuteDescription;
         [userArray addObject:item];
     }
     RecordDailyModel *dailyModel = [RecordDailyModel new];
-    dailyModel.recordItems = userArray;
-    dailyModel.date = nil;
-    
+    dailyModel.schedule = [NSString stringWithFormat:@"%@",@(arc4random()%4+3)];
+    dailyModel.date = [[NSDate date] monthAndDayDescription];
+    dailyModel.version = @([RecordGlobal sharedInstance].tableVersion+1);
     
     //创建插入对象
+    FMDTInsertCommand *dcmd = [[RecordDBSet shared].dailyModel createInsertCommand];
     FMDTInsertCommand *icmd = [[RecordDBSet shared].itemModel createInsertCommand];
     //添加要插入的对象集合
-    [icmd addWithArray:userArray];
+    [dcmd add:dailyModel];
+    [icmd addWithArray:@[dailyModel]];
     //设置添加操作是否使用replace语句
-    [icmd setRelpace:YES];
+    [dcmd setRelpace:YES];
     //执行插入操作
-    [icmd saveChangesInBackground:^{
+    [dcmd saveChangesInBackground:^{
         NSLog(@"批量数据提交完成");
     }];
 }

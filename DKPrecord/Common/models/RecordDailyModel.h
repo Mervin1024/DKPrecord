@@ -13,6 +13,6 @@
 
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSNumber *version;
-@property (nonatomic, copy) NSArray <RecordItemModel*> *recordItems;
+@property (nonatomic, copy) NSString *schedule;
 
 @end
